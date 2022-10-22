@@ -7,7 +7,7 @@
         <div class="bio">
             <div class="left">
                 <h2>
-                    Hello my name is Kenaniah Subrahmanyam. I first started coding at about 13 and I am currently a senior at UCF as a Computer Science major. I have managed to keep a 3.97 GPA throughout my degree while working part time. I have learned many skills along the way!
+                    Hello there! My name is Kenaniah. I am a Full-Stack developer with an emphasis on server-side coding. This is my personal website which I created using Vue.js and Naive UI. Feel free to take a look around or reach out to me!
                 </h2>
             </div>
         </div>
