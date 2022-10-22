@@ -20,7 +20,7 @@ import 'vfonts/Lato.css'
                 <li><RouterLink  to="/experience"><n-button quaternary size="large">Experience</n-button></RouterLink></li>
                 <li><RouterLink to="/projects"><n-button quaternary size="large">Projects</n-button></RouterLink></li>
                 <li><RouterLink  to="/contact"><n-button quaternary size="large">Contact</n-button></RouterLink></li>
-                <li><div class="icons">
+                <li class="border"><div class="icons">
                   <a class="nav_element" target="#2" href="https://www.linkedin.com/in/kenaniah-subrahmanyam/"><img class="icon" src="./assets/linkedin.webp"/></a>
                   <a class="nav_element" target="#1" href="https://github.com/ken3512"><img class="icon" src="./assets/github.png"/></a>
                 </div></li>
@@ -134,6 +134,9 @@ import 'vfonts/Lato.css'
     height: 3.5em;
     padding: 0.4em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu .border {
+    border-bottom: 1px solid #000;
   }
   .menu > li {
     display: flex;
