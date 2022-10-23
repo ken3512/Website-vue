@@ -33,37 +33,6 @@
                 <p class="timeline-subtitle">November 2021 – December 2021, C</p>
                 <h4 class="project_info">Hello my name is Kenaniah Subrahmanyam. I first started coding at about 13 and I am currently a senior at UCF as a Computer Science major. I have managed to keep a 3.97 GPA throughout my degree while working part time. I have learned many skills along the way!</h4>
             </section>
-
-            <!-- <section>
-                <h1 class="project_title">Club Event Organizer </h1>
-                <h3 class="project_headers">Technologies</h3>
-                <h4 class="project_info"></h4>
-                <h3 class="project_headers">Media</h3>
-                <h4 class="project_info"></h4>
-                <h3 class="project_headers">Description</h3>
-                <h4 class="project_info"></h4>
-            </section>
-
-            <section>
-                <h1 class="project_title">Dungeon Run </h1>
-                <h3 class="project_headers">Technologies</h3>
-                <h4 class="project_info"></h4>
-                <h3 class="project_headers">Media</h3>
-                <h4 class="project_info"></h4>
-                <h3 class="project_headers">Description</h3>
-                <h4 class="project_info"></h4>
-            </section>
-
-            <section>
-                <h1 class="project_title">Compiler</h1>
-                <h3 class="project_headers">Technologies</h3>
-                <h4 class="project_info"></h4>
-                <h3 class="project_headers">Media</h3>
-                <h4 class="project_info"></h4>
-                <h3 class="project_headers">Description</h3>
-                <h4 class="project_info"></h4>
-            </section> -->
-
         </div>
 </template>
 
@@ -104,7 +73,7 @@ $secondary: #4f537b;
         border-radius: 3px;
         background-color: #27293d;
         margin: auto;
-        width: 800px;
+        width: min(800px, 85%);
         padding: 15px;
     }
 </style>

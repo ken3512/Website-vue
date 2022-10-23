@@ -1,25 +1,25 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import 'vfonts/Lato.css'
+import $ from 'jquery'
 </script>
 
 <template>
-
   <header>
       <nav>
         <h1 class="logo">
           KS
         </h1>
         <div class="buttons">
-          <input id="menu-toggle" type="checkbox" />
+          <input id="menu-toggle" type="checkbox"/>
           <label class='menu-button-container' for="menu-toggle">
-          <div class='menu-button'></div>
+            <div class='menu-button'></div>
           </label>
-          <ul class="menu">
-                <li><RouterLink to="/"><n-button quaternary size="large">About</n-button></RouterLink></li>
-                <li><RouterLink  to="/experience"><n-button quaternary size="large">Experience</n-button></RouterLink></li>
-                <li><RouterLink to="/projects"><n-button quaternary size="large">Projects</n-button></RouterLink></li>
-                <li><RouterLink  to="/contact"><n-button quaternary size="large">Contact</n-button></RouterLink></li>
+          <ul class="menu" @:change="updateNav()">
+                <li><RouterLink to="/"><n-button quaternary size="large" id="about" @:click="closeNav()">About</n-button></RouterLink></li>
+                <li><RouterLink  to="/experience"><n-button quaternary size="large" id="experience" @:click="closeNav()">Experience</n-button></RouterLink></li>
+                <li><RouterLink to="/projects"><n-button quaternary size="large" id="projects" @:click="closeNav()">Projects</n-button></RouterLink></li>
+                <li><RouterLink  to="/contact"><n-button quaternary size="large" id="contact" @:click="closeNav()">Contact</n-button></RouterLink></li>
                 <li class="border"><div class="icons">
                   <a class="nav_element" target="#2" href="https://www.linkedin.com/in/kenaniah-subrahmanyam/"><img class="icon" src="./assets/linkedin.webp"/></a>
                   <a class="nav_element" target="#1" href="https://github.com/ken3512"><img class="icon" src="./assets/github.png"/></a>
@@ -27,26 +27,62 @@ import 'vfonts/Lato.css'
           </ul>
         </div>
       </nav>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <n-button quaternary size="large" id="temp" @:click="activate()">Contact</n-button>
   </header>
-
-
-
-
   <RouterView />
 </template>
+
+
+<script>
+export default{
+  name: 'App',
+  data(){
+    return{
+      
+    }
+  },
+  mounted()
+  {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.updateNav);
+    })
+  },
+  methods:
+  {
+    closeNav(){
+      document.getElementById("menu-toggle").checked = false;
+    },
+    activate()
+    {
+      // document.getElementById("about").disabled = true;
+      // $("#about").attr("disabled");
+      console.log($("#about").attr("disabled", true));
+    },
+    updateNav()
+    {
+      if(window.innerWidth > 509)
+      {
+        document.getElementById("menu-toggle").checked = false;
+      }
+    }
+  },
+}
+</script>
+
 
 <style lang="scss" scoped>
   @import url(https://fonts.googleapis.com/css?family=Raleway);
 
-
-
 * {
-  font-family: "Raleway";
   box-sizing: border-box;
 }
 
+#about{
+}
+
 .menu {
+  z-index:10;
+  position:relative;
   display: flex;
   flex-direction: row;
   list-style-type: none;
