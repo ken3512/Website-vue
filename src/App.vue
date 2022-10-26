@@ -16,10 +16,10 @@ import $ from 'jquery'
             <div class='menu-button'></div>
           </label>
           <ul class="menu" @:change="updateNav()">
-                <li><RouterLink to="/"><n-button quaternary size="large" id="about" @:click="closeNav()">About</n-button></RouterLink></li>
-                <li><RouterLink  to="/experience"><n-button quaternary size="large" id="experience" @:click="closeNav()">Experience</n-button></RouterLink></li>
-                <li><RouterLink to="/projects"><n-button quaternary size="large" id="projects" @:click="closeNav()">Projects</n-button></RouterLink></li>
-                <li><RouterLink  to="/contact"><n-button quaternary size="large" id="contact" @:click="closeNav()">Contact</n-button></RouterLink></li>
+                <li><RouterLink id="about" to="/"><n-button quaternary size="large" id="about-button" @:click="closeNav()">About</n-button></RouterLink></li>
+                <li><RouterLink id="experience"  to="/experience"><n-button quaternary size="large" id="experience-button" @:click="closeNav()">Experience</n-button></RouterLink></li>
+                <li><RouterLink id="projects" to="/projects"><n-button quaternary size="large" id="projects-button" @:click="closeNav()">Projects</n-button></RouterLink></li>
+                <li><RouterLink id="contact"  to="/contact"><n-button quaternary size="large" id="contact-button" @:click="closeNav()">Contact</n-button></RouterLink></li>
                 <li class="border"><div class="icons">
                   <a class="nav_element" target="#2" href="https://www.linkedin.com/in/kenaniah-subrahmanyam/"><img class="icon" src="./assets/linkedin.webp"/></a>
                   <a class="nav_element" target="#1" href="https://github.com/ken3512"><img class="icon" src="./assets/github.png"/></a>
@@ -27,7 +27,6 @@ import $ from 'jquery'
           </ul>
         </div>
       </nav>
-      <n-button quaternary size="large" id="temp" @:click="activate()">Contact</n-button>
   </header>
   <RouterView />
 </template>
@@ -41,6 +40,11 @@ export default{
       
     }
   },
+  watch:{
+    $route (to, from){
+        this.activate(from);
+    }
+  },
   mounted()
   {
     this.$nextTick(() => {
@@ -52,11 +56,26 @@ export default{
     closeNav(){
       document.getElementById("menu-toggle").checked = false;
     },
-    activate()
+    activate(path)
     {
-      // document.getElementById("about").disabled = true;
-      // $("#about").attr("disabled");
-      console.log($("#about").attr("disabled", true));
+      var routes = [document.getElementById("about"), 
+                    document.getElementById("experience"), 
+                    document.getElementById("projects"), 
+                    document.getElementById("contact")];
+      var buttons = [document.getElementById("about-button"), 
+                    document.getElementById("experience-button"), 
+                    document.getElementById("projects-button"), 
+                    document.getElementById("contact-button")];
+        
+      for(var i = 0; i < routes.length; i++)
+      {
+        if (routes[i].pathname === this.$route.path) {
+          buttons[i].classList.add("active-button");
+        }
+        else {
+          buttons[i].classList.remove("active-button");
+        }
+      }
     },
     updateNav()
     {
@@ -72,6 +91,11 @@ export default{
 
 <style lang="scss" scoped>
   @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+  .active-button{
+    background-color: #E6E0E0;
+    cursor: default;
+  }
 
 * {
   box-sizing: border-box;
