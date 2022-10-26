@@ -82,7 +82,7 @@ p {
 .timeline {
     position: relative;
     padding-left: 4rem;
-    margin: 0 0 0 30px;
+    margin: 0 30px  30px;
     color: white;
 
     &:before {
