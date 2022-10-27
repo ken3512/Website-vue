@@ -4,21 +4,22 @@
 <template>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <div class="about">
-            <br><br>
-            <div class="copy-text phone">
-                <h2 class="left">
-                    321-263-7871
-                </h2>
-                <button class="right" @:click="copy('.phone', '321-263-7871')"><i class="fa fa-clone"></i></button>
-            </div>
-            <br><br><br>
-            <div class="copy-text email">
-                <h2 class="left">
-                    kenaniah.subrahmanyam@outlook.com
-                </h2>
-                <button class="right" @:click="copy('.email', 'kenaniah.subrahmanyam@outlook.com')"><i class="fa fa-clone"></i></button>
-            </div>
+        <br><br>
+        <div class="copy-text phone">
+            <h2 class="left">
+                321-263-7871
+            </h2>
+            <button class="right" @:click="copy('.phone', '321-263-7871')"><i class="fa fa-clone"></i></button>
+        </div>
+        <br><br><br>
+        <div class="copy-text email">
+            <h2 class="left">
+                kenaniah.subrahmanyam@outlook.com
+            </h2>
+            <button class="right" @:click="copy('.email', 'kenaniah.subrahmanyam@outlook.com')"><i class="fa fa-clone"></i></button>
+        </div>
     </div>
+    <br>
 </template>
 
 <script>
@@ -36,6 +37,7 @@ export default{
         let copyText = document.querySelector(select);
         copyText.classList.add("active");
         window.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(input);
         setTimeout(function () {
             copyText.classList.remove("active");
         }, 2000);
@@ -62,7 +64,7 @@ export default{
         text-align: left;
         color: #F8F1F1;
         padding: 10px;
-        font-size: min(20px, 120%);
+        font-size: min(20px, 100%);
     }
 
     .contact{
@@ -113,13 +115,7 @@ body {
 	border-radius: 10px;
 	display: flex;
 }
-.copy-text input.text {
-	padding: 10px;
-	font-size: 18px;
-	color: #555;
-	border: none;
-	outline: none;
-}
+
 .copy-text button {
 	padding: 10px;
 	background: #465987;

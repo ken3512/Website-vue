@@ -34,6 +34,7 @@
                 <h4 class="project_info">Hello my name is Kenaniah Subrahmanyam. I first started coding at about 13 and I am currently a senior at UCF as a Computer Science major. I have managed to keep a 3.97 GPA throughout my degree while working part time. I have learned many skills along the way!</h4>
             </section>
         </div>
+        <br>
 </template>
 
 <style lang="scss" scoped>

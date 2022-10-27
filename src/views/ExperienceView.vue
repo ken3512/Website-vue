@@ -30,7 +30,6 @@
             </div>
         </div>
     </body>
-
 </template>
 
 <style lang="scss" scoped>
