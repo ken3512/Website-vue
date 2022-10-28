@@ -5,7 +5,7 @@
         <br>
         <div class="projects">
             <iframe
-                src="..\assets\resume.pdf"
+                src="http://147.182.141.121/resume.pdf"
                 width="100%"
                 style="border:none; height: min(110vw, 1050px)"
                 ></iframe>
