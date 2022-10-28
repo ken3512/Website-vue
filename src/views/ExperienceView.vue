@@ -73,7 +73,7 @@ body {
 p {
     font-weight: 300;
     line-height: 1.5;
-    font-size: 14px;
+    font-size: min(14px, 3vw);
     opacity: .8;
 }
 
@@ -148,7 +148,7 @@ p {
                     background: $secondary;
                     padding: 4px 8px;
                     border-radius: 3px;
-                    font-size: 12px;
+                    font-size: min(12px, 2vw);
                     font-weight: bold;
                 }
             }
@@ -158,7 +158,7 @@ p {
                 font-style: italic;
                 opacity: .4;
                 margin-top: 16px;
-                font-size: 11px;
+                font-size: min(12px, 3vw);
             }
         }
 
@@ -255,5 +255,9 @@ p {
         margin-top: 20px;
         width: min(90%, 1200px);
         border-radius: 10px;
+    }
+
+    li{
+        font-size: min(1rem, 1.5vh);
     }
 </style>

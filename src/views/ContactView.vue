@@ -64,7 +64,7 @@ export default{
         text-align: left;
         color: #F8F1F1;
         padding: 10px;
-        font-size: min(20px, 100%);
+        font-size: min(20px, 80%);
     }
 
     .contact{

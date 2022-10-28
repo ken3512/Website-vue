@@ -19,6 +19,7 @@ import $ from 'jquery'
                 <li><RouterLink id="about" to="/"><n-button quaternary size="large" id="about-button" @:click="closeNav()">About</n-button></RouterLink></li>
                 <li><RouterLink id="experience"  to="/experience"><n-button quaternary size="large" id="experience-button" @:click="closeNav()">Experience</n-button></RouterLink></li>
                 <li><RouterLink id="projects" to="/projects"><n-button quaternary size="large" id="projects-button" @:click="closeNav()">Projects</n-button></RouterLink></li>
+                <li><RouterLink id="resume"  to="/resume"><n-button quaternary size="large" id="resume-button" @:click="closeNav()">Resume</n-button></RouterLink></li>
                 <li><RouterLink id="contact"  to="/contact"><n-button quaternary size="large" id="contact-button" @:click="closeNav()">Contact</n-button></RouterLink></li>
                 <li class="border"><div class="icons">
                   <a class="nav_element" target="#2" href="https://www.linkedin.com/in/kenaniah-subrahmanyam/"><img class="icon" src="./assets/linkedin.webp"/></a>
@@ -61,10 +62,12 @@ export default{
       var routes = [document.getElementById("about"), 
                     document.getElementById("experience"), 
                     document.getElementById("projects"), 
+                    document.getElementById("resume"), 
                     document.getElementById("contact")];
       var buttons = [document.getElementById("about-button"), 
                     document.getElementById("experience-button"), 
                     document.getElementById("projects-button"), 
+                    document.getElementById("resume-button"), 
                     document.getElementById("contact-button")];
         
       for(var i = 0; i < routes.length; i++)

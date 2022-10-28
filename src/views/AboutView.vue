@@ -6,7 +6,7 @@
         </h1>
         <div class="bio">
             <div class="left">
-                <h2>
+                <h2 class="fontsize">
                     Hello there! My name is Kenaniah. I am a Full-Stack developer with an emphasis on server-side coding. This is my personal website which I created using Vue.js and Naive UI. Feel free to take a look around or reach out to me!
                 </h2>
             </div>
@@ -38,6 +38,10 @@
         margin: auto;
     }
 
+    .fontsize{
+        font-size: min(150%, 1rem);
+    }
+
     .bio{
         margin-top: 10px;
         background-color: #243964;
@@ -45,6 +49,11 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
+    h1{
+        font-size: min(150%, 3rem);
+    }
+
 
     p{
         color: black;
