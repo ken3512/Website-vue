@@ -5,7 +5,7 @@
         <br>
         <div class="projects">
             <iframe
-                src="http://147.182.141.121/resume.pdf"
+                src="https://drive.google.com/file/d/1mWs1hTFShwLM8j5RDpPhXLOxauKcAZ4O/view?usp=sharing"
                 width="100%"
                 style="border:none; height: min(110vw, 1050px)"
                 ></iframe>
