@@ -1,13 +1,13 @@
 <script setup>
 </script>
-
 <template>
         <br>
         <div class="projects">
             <iframe
-                src="https://drive.google.com/file/d/1mWs1hTFShwLM8j5RDpPhXLOxauKcAZ4O/view?usp=sharing"
+                src="https://drive.google.com/file/d/1mWs1hTFShwLM8j5RDpPhXLOxauKcAZ4O/preview"
                 width="100%"
                 style="border:none; height: min(110vw, 1050px)"
+                allow="autoplay"
                 ></iframe>
         </div>
         <br>
