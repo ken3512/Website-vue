@@ -16,11 +16,11 @@ import $ from 'jquery'
             <div class='menu-button'></div>
           </label>
           <ul class="menu" @:change="updateNav()">
-                <li><RouterLink id="about" to="/"><n-button quaternary size="large" id="about-button" @:click="closeNav()">About</n-button></RouterLink></li>
-                <li><RouterLink id="experience"  to="/experience"><n-button quaternary size="large" id="experience-button" @:click="closeNav()">Experience</n-button></RouterLink></li>
-                <li><RouterLink id="projects" to="/projects"><n-button quaternary size="large" id="projects-button" @:click="closeNav()">Projects</n-button></RouterLink></li>
-                <li><RouterLink id="resume"  to="/resume"><n-button quaternary size="large" id="resume-button" @:click="closeNav()">Resume</n-button></RouterLink></li>
-                <li><RouterLink id="contact"  to="/contact"><n-button quaternary size="large" id="contact-button" @:click="closeNav()">Contact</n-button></RouterLink></li>
+                <li><RouterLink class="no-underline" id="about" to="/"><n-button quaternary size="large" id="about-button" @:click="closeNav()">About</n-button></RouterLink></li>
+                <li><RouterLink class="no-underline" id="experience"  to="/experience"><n-button quaternary size="large" id="experience-button" @:click="closeNav()">Experience</n-button></RouterLink></li>
+                <li><RouterLink class="no-underline" id="projects" to="/projects"><n-button quaternary size="large" id="projects-button" @:click="closeNav()">Projects</n-button></RouterLink></li>
+                <li><RouterLink class="no-underline" id="resume"  to="/resume"><n-button quaternary size="large" id="resume-button" @:click="closeNav()">Resume</n-button></RouterLink></li>
+                <li><RouterLink class="no-underline" id="contact"  to="/contact"><n-button quaternary size="large" id="contact-button" @:click="closeNav()">Contact</n-button></RouterLink></li>
                 <li class="border"><div class="icons">
                   <a class="nav_element" target="#2" href="https://www.linkedin.com/in/kenaniah-subrahmanyam/"><img class="icon" src="./assets/linkedin.webp"/></a>
                   <a class="nav_element" target="#1" href="https://github.com/ken3512"><img class="icon" src="./assets/github.png"/></a>
@@ -103,7 +103,9 @@ export default{
   box-sizing: border-box;
 }
 
-#about{
+
+.no-underline{
+  text-decoration: none;
 }
 
 .menu {
@@ -171,7 +173,7 @@ export default{
   transform: rotate(-405deg);
 }
 
-@media (max-width: 509px) {
+@media (max-width: 660px) {
   .menu-button-container {
     display: flex;
   }
@@ -213,6 +215,15 @@ export default{
     border-bottom: 1px solid #444;
   }
 }
+
+  #about{
+    text-decoration:none
+  }
+
+  #about-button{
+    text-decoration:none
+
+  }
 
   .icons{
     padding-top: 4px;
